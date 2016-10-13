@@ -1,3 +1,4 @@
+import sys
 from curses import ascii
 
 
@@ -9,7 +10,8 @@ def bin_to_integer(string):
     return ret_val
 
 
-filepath = "/home/saponace/decode-nolinebreak.txt"
+filepath = sys.argv[1]
+print(filepath)
 with open(filepath) as buffer:
     output = ""
     oct = "beginning"
